@@ -71,6 +71,15 @@ document.addEventListener('click', function(event) {
     misDatos.enfermedad
   );
 
+  let datosPropietario = mascota.datosPropietario();
+
   console.log('mascota:', mascota);
   
+  let resultado = document.getElementById('resultado');
+
+  resultado.innerHTML = `El nombre de la persona encargada es ${datosPropietario.nombre}. 
+  El domicilio es ${datosPropietario.direccion}. 
+  El teléfono de contacto es ${datosPropietario.telefono}.
+  La mascota es un ${mascota.tipo} llamado ${mascota.nombreMascota}.
+  El motivo de la onsulta es ${mascota.enfermedad}.`
 }, false);
