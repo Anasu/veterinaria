@@ -53,4 +53,24 @@ document.addEventListener('click', function(event) {
 
 	// Log the clicked element in the console
 	console.log('target:', event.target);
+  let misDatos = {
+    propietario: document.getElementById('propietario').value,
+    telefono: document.getElementById('telefono').value,
+    direccion: document.getElementById('direccion').value,
+    nombreMascota: document.getElementById('nombreMascota').value,
+    tipo: document.getElementById('tipo').value,
+    enfermedad: document.getElementById('enfermedad').value,
+  }
+  
+  let mascota = new Mascota(
+    misDatos.propietario,
+    misDatos.direccion,
+    misDatos.telefono,
+    misDatos.tipo,
+    misDatos.nombreMascota,
+    misDatos.enfermedad
+  );
+
+  console.log('mascota:', mascota);
+  
 }, false);
