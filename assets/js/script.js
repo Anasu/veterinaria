@@ -13,3 +13,14 @@ class Propietario {
   }
 }
 
+class Animal extends Propietario {
+  constructor(nombreDueno, direccion, telefono, tipo) {
+    super(nombreDueno, direccion, telefono);
+    this._tipo = tipo;
+  }
+
+  get tipo() {
+    return this._tipo;
+  }
+}
+
